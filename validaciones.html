@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <!-- Basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+     
+      <!-- Mobile Metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+       <!-- Site Metas --> 
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+  
+      <!-- Site Icons -->
+      <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- Site CSS -->
+      <link rel="stylesheet" href="style.css">
+      <!-- ALL VERSION CSS -->
+      <link rel="stylesheet" href="css/versions.css">
+      <!-- Responsive CSS -->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="css/custom.css">
+  
+      <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body>
+
+
+
+  <body class="barber_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="cube-wrapper">
+		  <div class="cube-folding">
+			<span class="leaf1"></span>
+			<span class="leaf2"></span>
+			<span class="leaf3"></span>
+			<span class="leaf4"></span>
+		  </div>
+		  <div class="mus">
+			<img src="images/lode-img.png" alt="" />
+		  </div>
+		  <span class="loading" data-name="Loading">StyleBarber Loading</span>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="" />
+				</a>
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-rs-food">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="sesion.html">Inicio</a></li>
+						<li class="nav-item active"><a class="nav-link" href="validaciones.html">Validacion</a></li>
+            <li class="nav-item active"><a class="nav-link" href="datos.php">Datos</a></li>
+            
+            <li class="nav-item active"><a class="nav-link cerrar"onclick="mostrarAlerta()"><img src="images/cerrar.png" width="30" height="30"><h12>(Cerrar sesión)</h12> </a></li>
+					
+            
+                          
+            <script>
+              function mostrarAlerta() {
+                var confirmacion = confirm("¿Estás seguro de que deseas cerrar sesión?");
+                if (confirmacion) {
+                  alert("Has cerrado sesión exitosamente");
+                  window.location.href = "index.html";
+                } else {
+                 
+                  window.location.href = "datos.php";
+                }
+              }
+            </script>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+
+  <div id="home" class="parallax">
+		<div id="full-width" class="owl-carousel owl-theme home-hero">
+			<div class="text-center item slider-01 display-table overlay">
+				<div class="display-table-cell">
+					<div class="big-tagline text-center">
+						<h2><strong>Barberia Mr.Santander</strong><br>
+						en la Mana</h2>
+					</div>
+				</div>
+			</div>
+			<div class="text-center item slider-02 display-table overlay">
+				<div class="display-table-cell">
+					<div class="big-tagline text-center">
+						<h2><strong>Barberia Mr.Santander</strong><br>
+						en la Mana</h2>
+					</div>
+				</div>
+			</div>
+			<div class="text-center item slider-03 display-table overlay">
+				<div class="display-table-cell">
+					<div class="big-tagline text-center">
+						<h2><strong>Barberia Mr.Santander</strong><br>
+						en la Mana</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- end section -->
+	
+	
+							</div>
+							<div class="t-bottom"></div>
+						</div><!--widget -->
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div><!-- end section -->
+
+							</div>
+							
+
+
+							
+
+							<!-- end testimonial -->
+						</div><!-- end carousel -->
+					</div><!-- end col -->
+				</div><!-- end row -->
+			</div><!-- end container -->
+		</div><!-- end section -->  
+    </div>
+    
+        <div class="copyrights">
+          <div class="container text-md">
+            <center>
+              <div class="container text-md">
+                
+                <form action="validaciones.html" method="POST" onsubmit="return validarCedula()">
+                  <form>
+                
+                    <br><script>
+                       function validarCedula() {
+                         var cedula = document.getElementById("cedula").value;
+                        
+                         var total = 0;
+                         var longitud = cedula.length;
+                         var checkDigit = parseInt(cedula.charAt(longitud - 1));
+                         for (var i = 0; i < longitud - 1; i++) {
+                           if (i % 2 === 0) {
+                             var digit = parseInt(cedula.charAt(i)) * 2;
+                             if (digit > 9) digit -= 9;
+                             total += digit;
+                           } else {
+                             total += parseInt(cedula.charAt(i));
+                           }
+                         }
+                         var modulo = total % 10;
+                         if (modulo !== 0) modulo = 10 - modulo;
+                         if (modulo === checkDigit) {
+                           var alertHTML = '<div class="alert alert-info" role="alert">Número de cédula Correcto</div>';
+                           document.body.insertAdjacentHTML('afterbegin', alertHTML);
+                           // Función para que se pierda el mensaje de alerta después de 3 segundos (3000 ms)
+                           setTimeout(function () {
+                             var alertElement = document.querySelector('.alert-info');
+                             if (alertElement) {
+                               alertElement.remove();
+                             }
+                           },53000);
+                           return false; // Permitir el envío del formulario si la cédula es válida
+                         } else {
+                           var alertHTML = '<div class="alert alert-danger" role="alert">Número de cédula Incorrecto</div>';
+                           document.body.insertAdjacentHTML('afterbegin', alertHTML);
+                           // Función para que se pierda el mensaje de alerta después de 3 segundos (3000 ms)
+                           setTimeout(function () {
+                             var alertElement = document.querySelector('.alert-danger');
+                             if (alertElement) {
+                               alertElement.remove();
+                             }
+                           }, 5000);
+                           return false; // Detener el envío del formulario si la cédula es inválida
+                         }
+                       }
+                     </script>
+                     <form action="validaciones.html" method="POST" onsubmit="return validarCedula()">
+                       <label for="cedula">Número de cédula:</label><br>
+                       <input type="text" minlength="10" maxlength="10" id="cedula" name="cedula" required pattern="[0-9]+" title="Debe contener solo números">
+               
+                       <script>
+                         var cedulaInput = document.getElementById("cedula");
+                         cedulaInput.addEventListener("input", function () {
+                           var cedula = this.value;
+                           var repeatedDigits = cedula.match(/(\d)\1{3,}/); // Verificar si hay más de 3 dígitos consecutivos iguales
+                           if (repeatedDigits) {
+                             this.setCustomValidity("Ingrese una cédula válida.");
+                           } else {
+                             this.setCustomValidity(""); // Restablecer la validez del campo
+                           }
+                         });
+                       </script>
+                    <br> <label for="nombres">Nombres:</label><br>
+             <input type="text" id="nombre" name="name" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚ]+)?" title="Debe contener solo letras y un espacio" />
+             <script>
+               var lastnameInput = document.getElementById("nombre");
+               lastnameInput.addEventListener("input", function () {
+                 var lastnameValue = this.value;
+                 var repeatedCharacters = lastnameValue.match(/(\S)\1{1,}/); // Verificar si hay más de 2 caracteres consecutivos iguales
+                 if (repeatedCharacters) {
+                   this.setCustomValidity("No se permiten más de 2 caracteres consecutivos iguales.");
+                 } else {
+                   this.setCustomValidity(""); // Restablecer la validez del campo
+                 }
+               });
+             </script>     
+             
+             
+     <br><label for="apellido">Apellidos:</label><br>
+             
+     <input type="text" id="apellido" name="name" required pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚ]+(\s[a-zA-ZñÑáéíóúÁÉÍÓÚ]+)?" title="Debe contener solo letras y un espacio" />
+     <script>
+       var lastnameInput = document.getElementById("apellido");
+       lastnameInput.addEventListener("input", function () {
+         var lastnameValue = this.value;
+         var repeatedCharacters = lastnameValue.match(/(\S)\1{2,}/); // Verificar si hay más de 2 caracteres consecutivos iguales
+         if (repeatedCharacters) {
+           this.setCustomValidity("No se permiten más de 2 caracteres consecutivos iguales.");
+         } else {
+           this.setCustomValidity(""); // Restablecer la validez del campo
+         }
+       });
+     </script>
+     <br><label for="edad">Edad:</label><br>
+             <input type="number" min="1" max="99" id="edad" name="edad" required pattern="title"el cero debe estar detras de cada numer>
+                 
+             <br><label for="celular">Celular:</label><br>
+             <input type="tel" id="celular" name="celular" required pattern="^09\d{8}$" maxlength="10" title="Ingrese un número de celular válido">
+             
+             <script>
+             document.getElementById("celular").addEventListener("input", function() {
+               var celular = this.value;
+               var pattern = /^(?!.*(\d)\1{3})/;
+               
+               if (!pattern.test(celular)) {
+                 this.setCustomValidity("Ingrese un número de celular válido");
+               } else {
+                 this.setCustomValidity("");
+               }
+             });
+             </script>
+             
+                 
+             <br><label for="email">Correo electrónico:</label><br>
+             <input type="email" id="email" name="email" required pattern="^\S+$">
+             
+     
+     
+                     <br><label for="direccion">Direccion:</label><br>
+                     <input id="direccion" name="direccion" required>
+                     
+                     <script>
+                     document.getElementById("direccion").addEventListener("input", function() {
+                       var direccion = this.value;
+                       var pattern = /^(?!.*([A-Za-z-ZñÑáéíóúÁÉÍÓÚ])\1{2})(?!.*(\d)\2{3})(?!.*\s{2})[A-Za-z0-9-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+                       
+                       if (!pattern.test(direccion)) {
+                         this.setCustomValidity("Ingrese una direccion valida");
+                       } else {
+                         this.setCustomValidity("");
+                       }
+                     });
+                     </script>
+                 
+                 <br><label for="mensaje">Mensaje:</label><br>
+     <textarea id="mensaje" name="mensaje" required></textarea>
+     
+     <script>
+     document.getElementById("mensaje").addEventListener("input", function() {
+       var mensaje = this.value;
+       var pattern = /^(?!.*([A-Za-z-ZñÑáéíóúÁÉÍÓÚ])\1{2})(?!.*(\d)\2{3})(?!.*\s{2})[A-Za-z0-9-ZñÑáéíóúÁÉÍÓÚ\s]+$/;
+       
+       if (!pattern.test(mensaje)) {
+         this.setCustomValidity("Ingrese un mensaje válido");
+       } else {
+         this.setCustomValidity("");
+       }
+     });
+     </script>
+     
+                     
+                     
+                     
+     
+                 
+                     <br><input type="submit" value="Enviar">
+                 </form>
+                </form>
+                
+              </center> 
+
+          </div>
+          
+          
+    <br> </br><div class="footer-distributed">
+          
+				
+				</div>
+			</div><!-- end container -->
+		</div><!-- end copyrights -->
+	</div>
+    
+	<div id="testimonials" class="parallax section db parallax-inner-bg">
+    <div class="container">
+      <div class="section-title row text-center">
+        <div class="col-md-8 offset-md-2">
+          <h3>Barberia Mr.Santander</h3>
+        </div>
+      </div><!-- end title -->
+
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="testi-carousel owl-carousel owl-theme">                                
+            <div class="testimonial clearfix">
+              <div class="testi-meta">
+                <i class="fa fa-quote-right"></i>
+                <h4> <small>- Kevin Santander</small></h4>
+              </div>
+              <div class="desc">
+                <h3>LA MANA</h3>
+                <p class="lead">Direccion: Carlos Lozada y Gonzalo Albarracin esquina, La Mana, Ecuador </p>
+                <p class="lead">Telefono: 095 924 9313 </p>
+              </div>
+              <!-- end testi-meta -->
+            </div>
+            
+            
+
+            <!-- end testimonial -->
+          </div><!-- end carousel -->
+        </div><!-- end col -->
+      </div><!-- end row -->
+    </div><!-- end container -->
+  </div><!-- end section -->
+
+  <div class="copyrights">
+    <div class="container">
+      <div class="footer-distributed">
+      
+      </div>
+    </div><!-- end container -->
+  </div><!-- end copyrights -->
+</div>
+  
+
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+	<script src="js/responsive-tabs.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+</body>
+
+
+
+</html>
+
